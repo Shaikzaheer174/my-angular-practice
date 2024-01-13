@@ -17,10 +17,20 @@
 <h2 [style.color]="pink">this is prop binding</h2>
 
 <!-- event binding -->
-<button (click)="showImageToggle()">show iamge</button>
+<button (click)="showImageToggle()">{{imageToggle ? 'hide iamge' : 'show image'}}</button>
 
 <div *ngIf="imageToggle" style="margin-top: 10px;">
    <img [src]="myPath" alt="image" height="100px" width="100px">
 </div>
 
+<!-- two way binding --ngModel -->
+<h4>calculator</h4>
+<p>Enter the first value</p>
+<input type="text" [(ngModel)]="firstValue">
+<br>
+<p>Enter the second value</p>
+<input type="text" [(ngModel)]="secondValue">
 
+<br>
+
+<button (click)="performCalculation()">result is: {{output}}</button>

@@ -24,6 +24,14 @@ myPath = 'assets/js.png'
   {name: 'd', value: 'dd'},
 ];
 
+firstValue ='';
+secondValue = '';
+output : any;
+
+performCalculation() {
+  this.output =  Number(this.firstValue) + Number(this.secondValue);
+};
+
 showImageToggle() {
   this.imageToggle = !this.imageToggle;
 }
