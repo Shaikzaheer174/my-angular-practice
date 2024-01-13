@@ -1,0 +1,26 @@
+<h4>products works!</h4>
+
+<P>first value = {{value1}}</P>
+<P>first value = {{value2}}</P>
+<em>result is {{result}}</em>
+
+ <p *ngIf="true"><span>{{randomText}}</span></p>
+
+ <p *ngFor="let product of products">
+    <span>{{product.name}} and {{product.value}}</span>
+</p>
+
+<!-- received name from app component -->
+<h5>{{name}}</h5>
+
+<!-- property binding -->
+<h2 [style.color]="pink">this is prop binding</h2>
+
+<!-- event binding -->
+<button (click)="showImageToggle()">show iamge</button>
+
+<div *ngIf="imageToggle" style="margin-top: 10px;">
+   <img [src]="myPath" alt="image" height="100px" width="100px">
+</div>
+
+
