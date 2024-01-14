@@ -17,7 +17,7 @@
 <h2 [style.color]="pink">this is prop binding</h2>
 
 <!-- event binding -->
-<button (click)="showImageToggle()">{{imageToggle ? 'hide iamge' : 'show image'}}</button>
+<button (click)="showImageToggle()">{{imageToggle ? 'hide image' : 'show image'}}</button>
 
 <div *ngIf="imageToggle" style="margin-top: 10px;">
    <img [src]="myPath" alt="image" height="100px" width="100px">
@@ -37,3 +37,5 @@
 
 <!--  built-in pipe -->
 <p>{{1 | currency:'USD':'symbol':'1.2-2'}}</p>
+
+<button (click)="greeting()">Greetings you</button>

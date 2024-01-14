@@ -1,11 +1,19 @@
 import { Component, Input } from '@angular/core';
+import { Iproduct } from './products';
+import { Iproducts } from './products-interface';
 
 @Component({
   selector: 'app-products',
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent {
+export class ProductsComponent implements Iproducts{
+  id: string = '123';
+
+  greeting(): void {
+    alert('hello');
+  };
+  
 value1 = 1;
 value2 = 2;
 result = this.value1 + this.value2;
@@ -27,6 +35,12 @@ myPath = 'assets/js.png'
 firstValue ='';
 secondValue = '';
 output : any;
+
+productInterfact : Iproduct = {
+  id: 123,
+  name: 'd',
+  type: 'h'
+};
 
 performCalculation() {
   this.output =  Number(this.firstValue) + Number(this.secondValue);
