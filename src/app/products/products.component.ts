@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Iproduct } from './products';
 import { Iproducts } from './products-interface';
 
@@ -7,7 +7,14 @@ import { Iproducts } from './products-interface';
   templateUrl: './products.component.html',
   styleUrls: ['./products.component.css']
 })
-export class ProductsComponent implements Iproducts{
+export class ProductsComponent implements OnInit, Iproducts{
+initProperty: string | undefined;
+
+  ngOnInit(): void {
+    this.initProperty = 'hi';
+    console.log(this.initProperty);
+  }
+
   id: string = '123';
 
   greeting(): void {
